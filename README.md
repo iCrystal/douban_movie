@@ -14,6 +14,7 @@
   + jade
   + Moment.js
 + 构建工具
+  + Bower
   + Grunt
     + Less
     + cssmin

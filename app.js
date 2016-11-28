@@ -2,7 +2,7 @@ var express = require('express'); //加载express模块
 var bodyParser = require('body-parser');
 var path = require('path');
 var port = process.env.PORT || 3000;  //设置端口号及环境变量
-var app = express();  //启动一点web服务器
+var app = express();  //启动express web服务器
 
 app.set('views','./views/pages');//设置视图根目录
 app.set('view engine','jade');  //设置默认模板引擎
@@ -20,7 +20,7 @@ console.log('imooc start on port ' + port);
 //index page
 app.get('/',function(req,res) { //路由规则
 	res.render('index',{
-		title:'imooc 首页',
+		title:'iMoive首页',
 		movies: [{
 			title: '机械战警',
 			_id: 1,
@@ -52,7 +52,7 @@ app.get('/',function(req,res) { //路由规则
 //detail page
 app.get('/movie/:id',function(req,res) {
 	res.render('detail',{
-		title:'imooc 详情页',
+		title:'iMoive详情页',
 		movie: {
 			doctor: '何塞帕迪里亚',
 			country: '美国',
@@ -69,7 +69,7 @@ app.get('/movie/:id',function(req,res) {
 //admin page
 app.get('/admin/movie',function(req,res) {
 	res.render('admin',{
-		title:'imooc后台录入页',
+		title:'iMoive后台录入页',
 		movie: {
 			title: '',
 			doctor: '',
@@ -86,7 +86,7 @@ app.get('/admin/movie',function(req,res) {
 //list page
 app.get('/admin/list',function(req,res) {
 	res.render('list',{
-		title:'imooc 列表页',
+		title:'iMoive列表页',
 		movies: [{
 			title: '机械战警',
 			_id:1,
